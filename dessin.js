@@ -34,6 +34,11 @@ ctx.shadowOffsetY = 2;
 ctx.shadowBlur = 4;
 // Couleur de l'ombre
 ctx.shadowColor = 'black';
+
+//retirer l'ombre
+// ctx.shadowOffsetX = 0;
+// ctx.shadowOffsetY = 0;
+// ctx.shadowColor = 'transparent';
 ctx.stroke();
 ctx.fill();
 
@@ -61,6 +66,30 @@ ctx.textBaseline = 'top';
 ctx.strokeText(msg, 100, 100[200]);
 // Caractères pleins
 ctx.fillText(msg, 50, 50[200]);
+
+// ctx.clearRect(x, y, largeur, hauteur);
+//Tester la méthode clearRect() sur votre dessin, en effaçant une partie du canvas, par exemple 
+//le rectangle 100, 100, 300, 300.
+
+ctx.clearRect(100, 50, 100, 100);
+
+const image = new Image();
+image.src = "img/GitHub-Mark.png";
+image.onload = function() {
+	ctx.drawImage(this, 120, 120, 100, 100);
+	// ctx.drawImage(this, 200, 200, 100, 100);
+};
+
+
+
+
+
+
+
+
+
+
+
 
 //openGameart.org => récupérer des sprites
 
